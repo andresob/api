@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <link type="text/css" rel="stylesheet" href="css/colorbrewer.css"/>
+  </head>
+  <body>
+    <div id="blank">
+      <img src="data/main.png"/>
+    </div>
+    <h2 id="title">Identificação de Fluxos Migratórios</h2>
+    <ul id="menu">
+      <li><a id="index" href="index.html">Data Fixa</a></li>
+      <li><a id="ue" href="ue.html"> Última Etapa</a></li>
+      <li><a id="inter" href="inter.html">Intermediária</a></li>
+    </ul>
+    <div id="vor-check">
+      <input type="checkbox" id="voronoi">Voronoi</input>
+    </div>
+    <div id="info">
+      <div id="legend"></div>
+      <div id="city"></div>
+      <div id="cod"></div>
+      <div id="lat"></div>
+      <div id="log"></div>
+      <div id="meso"></div>
+      <div id="cod_meso"></div>
+      <div id="micro"></div>
+      <div id="cod_micro"></div>
+      <div id="input"></div>
+      <div id="output"></div>
+      <div id="balance"></div>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/d3.v3.min.js"></script>
+    <script type="text/javascript" src="js/d3.csv.js"></script>
+    <script type="text/javascript" src="js/d3.geo.js"></script>
+    <script type="text/javascript" src="js/d3.geom.js"></script>
+    <script type="text/javascript" src="js/colorbrewer.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#index').click(function(e) {
+          event.preventDefault();
+          $('#ue').parent().removeClass('marked');
+          $('#inter').parent().removeClass('marked');
+          $(this).parent().toggleClass('marked');
+          graph('rate_df.json','data_fixa.csv', 'YlGn', 'input_data_fixa', 'output_data_fixa', 'saldo_data_fixa');
+        });
+        $('#ue').click(function(e) {
+          event.preventDefault();
+          $('#index').parent().removeClass('marked');
+          $('#inter').parent().removeClass('marked');
+          $(this).parent().toggleClass('marked');
+          graph('rate_ue.json','ultima_etapa.csv','RdPu', 'input_ue', 'output_ue', 'rate_ue');
+        });
+        $('#inter').click(function(e) {
+          event.preventDefault();
+          $('#ue').parent().removeClass('marked');
+          $('#index').parent().removeClass('marked');
+          $(this).parent().toggleClass('marked');
+          graph('rate.json','etapas.csv', 'OrRd');
+        });
+      });
+    </script>
+  </body>
+</html>

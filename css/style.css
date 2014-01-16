@@ -1,0 +1,170 @@
+@font-face {
+  font-family: 'Bevan';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Bevan'), url(http://themes.googleusercontent.com/static/fonts/bevan/v4/EJh9uh2wkQP9ayreC3xPZaCWcynf_cDxXwCLxiixG1c.woff) format('woff');
+}
+@font-face {
+  font-family: 'Cardo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cardo'), local('Cardo-Regular'), url(http://themes.googleusercontent.com/static/fonts/cardo/v5/c6Zi_ulq7hv-avk-G9Yut6CWcynf_cDxXwCLxiixG1c.woff) format('woff');
+}
+
+body {
+  width: 1170px;
+  height: 100%;
+  margin: 0 auto;
+  font-family: "Helvetica Neue";
+}
+
+body > svg {
+  float: left;
+  margin-right: 30px;
+}
+
+h2 {
+  font-size: 1.145em;
+  font-family: 'Bevan', Helvetica;
+}
+
+#title {
+  width: 400px;
+  float: right;
+}
+
+#blank {
+  width: 740px;
+  height: 670px;
+  float:left;
+  margin: 0;
+}
+
+#blank > img {
+  width: 740px;
+  height: auto;
+  margin-top: 50px;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+#menu {
+  width: 400px;
+  float: right;
+  position: relative;
+  margin: 0px 0 20px 0;
+  padding: 0;
+}
+#menu > li {
+  border: 2px solid #ccc;
+  display: inline;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+#menu > li:hover {
+  background-color: #e6e6e6;
+  color: #fff;
+}
+
+#menu > li > a {
+  text-decoration: none;
+  color: #a6a6a6;
+}
+
+#menu > li.marked, #menu > li.marked > a {
+  background-color: #ccc;
+  color: #fff;
+}
+
+#vor-check {
+  width: 400px;
+  float: right;
+  position: relative;
+  font-size: 20px;
+  font-weight: 200;
+  border-top: 4px solid #ededed;
+  padding: 20px 0;
+  margin: 0;
+}
+
+#info {
+  width: 400px;
+  float: right;
+  position: relative;
+  font-size: 23px;
+  font-weight: 100;
+  border-top: 4px solid #ededed;
+  padding: 30px 0;
+  margin: 10px 0;
+}
+
+#city, #balance {
+  font-family: 'Bevan', Helvetica;
+  font-size: 1.6em;
+}
+
+#lat, #log, #cod {
+  font-size: 19px;
+}
+
+#input {
+  margin-top: 20px;
+}
+#state path {
+  stroke: #fff;
+  stroke-width: .8px;
+  stroke-linejoin: round;
+}
+
+#state path:hover {
+   fill: #5eab1f;
+   fill: #999;
+   cursor: pointer;    
+   pointer-events: all;
+}
+
+path.arc {
+  pointer-events: none;
+  fill: none;
+  stroke-opacity: .5;
+  display: none;
+}
+
+path.cell {
+  fill: none;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.circles {
+  fill-opacity: .8;
+  stroke: #f1f2f3;
+  stroke-width: 1.2px;
+}
+
+#cells.voronoi path.cell {
+  stroke: brown;
+}
+
+#cells g:hover path.arc {
+  display: inherit;
+}
+
+#legend {
+  height: 40px;
+}
+
+li.key {
+  border-top-width: 15px;
+  border-top-style: solid;
+  font-size: .75em;
+  width: 10%;
+  padding-left: 0;
+  padding-right: 0;
+  float: left;
+  list-style: none;
+}
