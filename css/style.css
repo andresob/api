@@ -58,26 +58,26 @@ h2 {
   margin: 0px 0 20px 0;
   padding: 0;
 }
-#menu > li {
-  border: 2px solid #ccc;
-  display: inline;
-  border-radius: 5px;
-  padding: 5px 15px;
-}
 
-#menu > li:hover {
-  background-color: #e6e6e6;
-  color: #fff;
+#menu > li {
+  display: inline;
 }
 
 #menu > li > a {
+  background-color: #b76661;
+  border-radius: 3px;
+  padding: 5px 20px;
+  transition: background 0.5s ease-out;
   text-decoration: none;
-  color: #a6a6a6;
+  color: #fff;
 }
 
-#menu > li.marked, #menu > li.marked > a {
-  background-color: #ccc;
-  color: #fff;
+#menu > li > a:hover {
+  background-color: #9d4d48;
+}
+
+#menu > li.marked > a {
+  background-color: #b2cdcd;
 }
 
 #vor-check {
