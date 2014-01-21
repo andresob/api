@@ -55,8 +55,11 @@ h2 {
   width: 400px;
   float: right;
   position: relative;
-  margin: 0px 0 20px 0;
-  padding: 0;
+  margin: 0px 0 10px 0;
+  padding: 0 0 10px 0;
+  box-shadow: 0px 1px 0px #dedede, 0 3px 0 #efefef;
+  height: 40px;
+  line-height: 40px;
 }
 
 #menu > li {
@@ -80,24 +83,12 @@ h2 {
   background-color: #b2cdcd;
 }
 
-#vor-check {
-  width: 400px;
-  float: right;
-  position: relative;
-  font-size: 20px;
-  font-weight: 200;
-  border-top: 4px solid #ededed;
-  padding: 20px 0;
-  margin: 0;
-}
-
 #info {
   width: 400px;
   float: right;
   position: relative;
   font-size: 23px;
   font-weight: 100;
-  border-top: 4px solid #ededed;
   padding: 30px 0;
   margin: 10px 0;
 }
@@ -118,6 +109,7 @@ h2 {
   stroke: #fff;
   stroke-width: .8px;
   stroke-linejoin: round;
+  transition: fill 0.2s ease-out;
 }
 
 #state path:hover {
