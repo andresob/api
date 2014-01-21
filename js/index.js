@@ -63,16 +63,9 @@ d3.selectAll('#legend > ul').remove();
                 break;
               };
             }
-            return "q" + Math.min(8, ~~(rate * 9 / 12)) + "-9";
+            return "q" + Math.min(8, ~~(rate * 9 / 12)) + "-9 cities";
           })
-          .attr("d", path)
-          .on("mouseover", function(d) {
-                var title = d3.select("#subtitle")
-                        .text(d.properties.NOME);
-          });
-    
+          .attr("d", path);
     });
-
   });
-
 }

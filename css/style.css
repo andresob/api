@@ -150,13 +150,11 @@ path.cell {
   height: 40px;
 }
 
-li.key {
-  border-top-width: 15px;
-  border-top-style: solid;
-  font-size: .75em;
-  width: 10%;
-  padding-left: 0;
-  padding-right: 0;
-  float: left;
-  list-style: none;
+.card {
+  width: 300px;
+  height: 500px;
+  position: relative;
+  background-color: #eaeaea;
+  z-index: 9999;
+  float: right;
 }

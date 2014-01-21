@@ -11,11 +11,13 @@
       <img src="data/main.png"/>
     </div>
     <h2 id="title">Identificação de Fluxos Migratórios</h2>
-    <ul id="menu" class="animated slideInRight">
+    <ul id="menu">
       <li><a id="index" href="index.html">Data Fixa</a></li>
       <li><a id="ue" href="ue.html"> Última Etapa</a></li>
       <li><a id="inter" href="inter.html">Intermediária</a></li>
     </ul>
+    <div class="card">
+    </div>
     <script src="js/jquery.js"></script>
     <script src="js/d3.v3.min.js"></script>
     <script src="js/d3.csv.js"></script>
@@ -23,7 +25,7 @@
     <script src="js/d3.geom.js"></script>
     <script src="js/colorbrewer.js"></script>
     <script src="js/index.js"></script>
-    <script type="text/javascript">
+    <script>
       $(document).ready(function () {
         $('#index').click(function(e) {
           event.preventDefault();
@@ -45,6 +47,11 @@
           $('#index').parent().removeClass('marked');
           $(this).parent().toggleClass('marked');
           graph('rate.json','etapas.csv', 'OrRd');
+        });
+        $('.cities').click(function(){
+          $('.card').removeClass().addClass('slideInRight animated').one('webkitAnimationEnd mozAnimationEnd oAnimationEnd animationEnd', function(){
+          $(this).removeClass();
+          });
         });
       });
     </script>
