@@ -87,7 +87,7 @@ path.cell {
   padding: 20px;
   background-color: #fafafa;
   color: #666;
-  -webkit-box-shadow: 0 0 3px 3px #efefef;
-  -moz-shadow: 0 0 3px 3px #efefef;
-  box-shadow: 0 0 3px 3px #efefef;
+  -webkit-box-shadow: inset -1px 0px 6px #afafaf; 
+  -moz-shadow: inset -1px 0px 6px #afafaf;
+  box-shadow: inset -1px 0px 6px #afafaf;
 }
