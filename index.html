@@ -2,23 +2,24 @@
 <!DOCTYPE html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/colorbrewer.css"/>
     <link rel="stylesheet" href="css/animate.css">
   </head>
   <body>
-    <div id="blank">
-      <img src="data/main.png"/>
-    </div>
-    <h2 id="title">Identificação de Fluxos Migratórios</h2>
+    <div id="pageslide" style="left: -240px; right: auto; display: none;"></div>
+    <a href="#panel" class="open">
+      <span class='glyphicon glyphicon-align-justify'></span>
+    </a>
     <ul id="menu">
       <li><a id="index" href="index.html">Data Fixa</a></li>
       <li><a id="ue" href="ue.html"> Última Etapa</a></li>
       <li><a id="inter" href="inter.html">Intermediária</a></li>
     </ul>
-    <div class="card">
-    </div>
     <script src="js/jquery.js"></script>
+    <script src="js/jquery.pageslide.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/d3.v3.min.js"></script>
     <script src="js/d3.csv.js"></script>
     <script src="js/d3.geo.js"></script>
@@ -27,6 +28,7 @@
     <script src="js/index.js"></script>
     <script>
       $(document).ready(function () {
+        $(".open").pageslide({ direction: "right", modal: true });
         $('#index').click(function(e) {
           event.preventDefault();
           $('#ue').parent().removeClass('marked');
